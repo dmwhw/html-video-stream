@@ -1,0 +1,13 @@
+<script src="./hls.js"></script>
+<video id="video"></video>
+<script>
+  if(Hls.isSupported()) {
+    var video = document.getElementById('video');
+    var hls = new Hls();
+    hls.loadSource('http://172.16.102.251/live/test/hls.m3u8');
+    hls.attachMedia(video);
+    hls.on(Hls.Events.MANIFEST_PARSED,function() {
+      video.play();
+  });
+ }
+</script>
