@@ -13,4 +13,7 @@
 //纯的h264
 //ffmpeg -re  -stream_loop -1 -i 264.mp4 -c copy -f flv  rtmp://localhost/live/0
 
- 
+
+//、查看视频格式
+
+//ffprobe -print_format json -show_streams -select_streams v -hide_banner -v quiet
