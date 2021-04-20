@@ -63,7 +63,7 @@
 
     </div>
 
-    <script src="./flv.js?v=2"></script>
+    <script src="flv.js"></script>
     
     <script>
          if (flvjs.isSupported()) {
@@ -75,10 +75,10 @@
             var flvPlayer = flvjs.createPlayer({
                 type: 'flv',
                 isLive: true,
-                hasAudio: true,
+                hasAudio: false,
                 hasVideo: true,
                 enableStashBuffer: true,
-                url: 'http://172.16.102.251/live/0.flv'
+                url: 'http://localhost:8000/live/0.flv'
             });
             flvPlayer.attachMediaElement(videoElement);
             flvPlayer.load();
